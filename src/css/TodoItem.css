@@ -1,0 +1,46 @@
+/* Custom CSS */
+.to-do-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 1em;
+  background-color: #393e46;
+  border-radius: 0.4em;
+}
+.to-do-item .complete-btn {
+  position: relative;
+}
+.to-do-item .complete-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.to-do-item .impt-active {
+  fill: white;
+}
+.to-do-item > * {
+  color: #fff;
+}
+.to-do-item .content-wrapper p {
+  font-size: 0.8em;
+}
+.to-do-item .content-wrapper > * {
+  color: #fff;
+}
+.to-do-item .impt-btn {
+  margin-left: auto;
+  scale: 1.2;
+}
+.to-do-item span:hover {
+  cursor: pointer;
+}
+.to-do-item .impt-active {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}/*# sourceMappingURL=TodoItem.css.map */

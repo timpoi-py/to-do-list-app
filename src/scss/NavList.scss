@@ -1,0 +1,48 @@
+@import "custom";
+
+.nav-list {
+  font-weight: 600;
+  padding: 1em 0;
+  background-color: $clr-light;
+  display: none;
+
+  ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .container {
+    text-align: center;
+    line-height: 2;
+
+    display: grid;
+    gap: 1em;
+
+    hr {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .projects-wrapper {
+      p {
+        font-size: 1.4em;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+    }
+
+    .add-project-btn {
+      position: relative;
+      right: 0.5ch;
+    }
+
+    .add-project-btn:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.show {
+  display: block;
+}

@@ -1,0 +1,36 @@
+/* Custom CSS */
+.header {
+  padding: 0.5em 0;
+  background-color: #222831;
+}
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  margin-left: 1em;
+}
+.header .wrapper h1 {
+  color: #eeeeee;
+  font-weight: 600;
+  font-size: clamp(2.5em, 5vw, 3em);
+}
+.header .wrapper svg {
+  stroke: #eeeeee;
+  width: clamp(2em, 5vw, 2.5em);
+}
+.header .menu {
+  stroke: #eeeeee;
+  width: clamp(2em, 5vw, 2.5em);
+  margin-right: 1em;
+}
+.header .menu:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=Header.css.map */

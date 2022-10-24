@@ -1,0 +1,43 @@
+@import "custom";
+
+.header {
+  padding: 0.5em 0;
+  background-color: $clr-darkest;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+
+    margin-left: 1em;
+
+    h1 {
+      color: $txt-light;
+      font-weight: 600;
+      font-size: clamp(2.5em, 5vw, 3em);
+    }
+
+    svg {
+      stroke: $txt-light;
+      width: clamp(2em, 5vw, 2.5em);
+    }
+  }
+
+  .menu {
+    stroke: $txt-light;
+    width: clamp(2em, 5vw, 2.5em);
+    margin-right: 1em;
+  }
+  .menu:hover {
+    opacity: 0.8;
+  }
+}

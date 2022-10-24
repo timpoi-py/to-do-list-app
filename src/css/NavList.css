@@ -1,0 +1,38 @@
+/* Custom CSS */
+.nav-list {
+  font-weight: 600;
+  padding: 1em 0;
+  background-color: #eeeeee;
+  display: none;
+}
+.nav-list ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.nav-list .container {
+  text-align: center;
+  line-height: 2;
+  display: grid;
+  gap: 1em;
+}
+.nav-list .container hr {
+  width: 80%;
+  margin: 0 auto;
+}
+.nav-list .container .projects-wrapper p {
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.nav-list .container .add-project-btn {
+  position: relative;
+  right: 0.5ch;
+}
+.nav-list .container .add-project-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.show {
+  display: block;
+}/*# sourceMappingURL=NavList.css.map */

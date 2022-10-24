@@ -1,0 +1,121 @@
+/* Custom CSS */
+.add-todo-form {
+  padding-bottom: 2.5em;
+  border-radius: 0.5em;
+  background-color: #393e46;
+  opacity: 0.98;
+  margin: 0.5em;
+  box-shadow: 0 0 20px 0 #222831;
+}
+.add-todo-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5em;
+  padding: 1em;
+}
+.add-todo-form form .btn-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+}
+.add-todo-form form .btn-text-wrapper .material-symbols-outlined {
+  color: #fff;
+}
+.add-todo-form form .btn-text-wrapper .task-item-input {
+  width: 100%;
+  height: 1.2em;
+  font-size: 1.2em;
+  border: none;
+}
+.add-todo-form form .btn-text-wrapper .task-item-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.545);
+}
+.add-todo-form form .btn-text-wrapper .task-item-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.545);
+}
+.add-todo-form form .btn-text-wrapper .task-item-input::placeholder {
+  color: rgba(255, 255, 255, 0.545);
+}
+.add-todo-form form .btn-text-wrapper .task-item-input:focus {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+}
+.add-todo-form form .params-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.add-todo-form form .params-wrapper .add-to-myDay-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.add-todo-form form .params-wrapper .due-date-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.add-todo-form form .params-wrapper .due-date-wrapper input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.add-todo-form form input {
+  background-color: transparent;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.add-todo-form form label {
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.add-todo-form p {
+  color: rgb(255, 56, 56);
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+}
+
+.add-todo-btn-container {
+  padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+.add-todo-btn-container .add-todo-btn {
+  width: 4em;
+  height: 4em;
+  background-color: #00888f;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.4);
+  transition: filter 200ms ease-in-out;
+}
+.add-todo-btn-container .add-todo-btn::before {
+  content: "+";
+  position: absolute;
+  color: white;
+  font-size: 2.5em;
+  font-weight: 600;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.add-todo-btn-container .add-todo-btn:hover {
+  filter: brightness(1.2);
+}
+
+.add-btn-hide {
+  display: none;
+}
+
+.hide-form {
+  display: none;
+}/*# sourceMappingURL=AddTodo.css.map */
