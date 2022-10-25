@@ -5,7 +5,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="https://timpoi-py.github.io/to-do-list-app">
+  <BrowserRouter basename="/to-do-list-app">
     <React.StrictMode>
       <App />
     </React.StrictMode>
