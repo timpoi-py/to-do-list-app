@@ -101,8 +101,20 @@ select {
   width: min(600px, 100%);
 }
 
-.add-todo .add-todo-btn-container {
+.add-todo .add-todo-btn-container .add-todo-btn {
   position: fixed;
   right: 0;
   bottom: 0;
+  margin: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .App .header {
+    grid-column: 1/3;
+  }
 }/*# sourceMappingURL=App.css.map */

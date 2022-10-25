@@ -36,7 +36,7 @@ const App = () => {
     <div className="App">
       <Header toggleDisplay={toggleDisplay} />
       <NavList display={display} />
-      <Main storageList={storageList} />
+      <Main storageList={storageList} setStorageList={setStorageList} />
       <AddTodo updateStorageList={updateStorageList} />
     </div>
   );

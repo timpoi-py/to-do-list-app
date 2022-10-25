@@ -1,20 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/styles.js";
 
-const TodoItem = ({ keyId, task, dueDate, done, important }) => {
+const TodoItem = ({
+  setStorageList,
+  keyId,
+  task,
+  dueDate,
+  done,
+  important,
+}) => {
   const [checkBtn, setCheckBtn] = useState(done ? "complete-btn" : "");
   const [importantBtn, setImportantBtn] = useState(
     important ? "impt-active" : ""
   );
 
+  const updatingStorageList = (setStorageList) => {
+    let updatedStorageList = [];
+
+    for (let i = 0; i < localStorage.length; i++) {
+      let value = JSON.parse(localStorage.getItem(localStorage.key(i)));
+      updatedStorageList.push(value);
+    }
+
+    setStorageList(updatedStorageList);
+  };
+
+  const deleteInLocalStorage = (e) => {
+    localStorage.removeItem(e.target.parentElement.dataset.key);
+  };
+
+  const deleteTodoItem = (e) => {
+    deleteInLocalStorage(e);
+    updatingStorageList(setStorageList);
+  };
+
   const checkBtnClicked = (e) => {
     toggleDone(e);
     checkSetItemDone(e);
+    updatingStorageList(setStorageList);
   };
 
   const importantBtnClicked = (e) => {
     toggleImportant(e);
     checkIfImportant(e);
+    updatingStorageList(setStorageList);
   };
 
   const checkIfImportant = (e) => {
@@ -68,8 +97,14 @@ const TodoItem = ({ keyId, task, dueDate, done, important }) => {
         <p>{dueDate}</p>
       </div>
       <span
+        className="material-symbols-outlined trash-btn"
+        onClick={(e) => deleteTodoItem(e)}
+      >
+        delete
+      </span>
+      <span
         className={`material-symbols-outlined impt-btn ${importantBtn}`}
-        onClick={importantBtnClicked}
+        onClick={(e) => importantBtnClicked(e)}
       >
         star
       </span>

@@ -9,6 +9,7 @@
   padding: 1em 1em;
   background-color: $clr-dark;
   border-radius: 0.4em;
+  min-width: 100%;
 
   .complete-btn {
     position: relative;
@@ -35,6 +36,10 @@
   }
 
   .content-wrapper {
+    h3 {
+      word-break: break-word;
+    }
+
     p {
       font-size: 0.8em;
     }
@@ -44,9 +49,14 @@
     color: #fff;
   }
 
-  .impt-btn {
+  .trash-btn {
+    font-size: 1.7em;
     margin-left: auto;
-    scale: 1.2;
+    color: rgb(255, 80, 80);
+  }
+
+  .impt-btn {
+    font-size: 1.8em;
   }
 
   span:hover {

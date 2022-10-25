@@ -45,12 +45,18 @@ $dimension: 4em;
         color: #fff;
         font-weight: 600;
       }
+
+      .task-item-input:hover {
+        cursor: text;
+      }
     }
 
     .params-wrapper {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5em;
       width: 100%;
 
       .add-to-myDay-wrapper {
@@ -61,11 +67,13 @@ $dimension: 4em;
 
       .due-date-wrapper {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        flex-direction: column;
         gap: 0.5em;
 
         input::-webkit-calendar-picker-indicator {
           filter: invert(1);
+          cursor: pointer;
         }
       }
     }
@@ -94,8 +102,6 @@ $dimension: 4em;
 
 .add-todo-btn-container {
   padding: 1em;
-  display: flex;
-  justify-content: flex-end;
   background-color: transparent;
 
   .add-todo-btn {
@@ -121,6 +127,7 @@ $dimension: 4em;
 
   .add-todo-btn:hover {
     filter: brightness(1.2);
+    cursor: pointer;
   }
 }
 

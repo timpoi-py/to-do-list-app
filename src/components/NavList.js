@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import "../css/styles.js";
 
 const NavList = ({ display }) => {
@@ -6,16 +7,16 @@ const NavList = ({ display }) => {
     <div className={`nav-list ${display}`}>
       <div className="container">
         <ul className={`main-nav`}>
-          <li>Tasks</li>
-          <li>My Day</li>
-          <li>This week</li>
-          <li>Important</li>
+          <Link to={"/"}>Tasks</Link>
+          <Link to={"my-day"}>My Day</Link>
+          <Link to={"this-week"}>This week</Link>
+          <Link to={"important"}>Important</Link>
         </ul>
         <hr className="divider" />
         <div className="projects-wrapper">
           <p>Projects</p>
           <ul role={"list"} className="proj-nav">
-            <li>Something</li>
+            <Link>Something</Link>
           </ul>
         </div>
         <p className="add-project-btn ">

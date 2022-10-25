@@ -7,6 +7,7 @@
   padding: 1em 1em;
   background-color: #393e46;
   border-radius: 0.4em;
+  min-width: 100%;
 }
 .to-do-item .complete-btn {
   position: relative;
@@ -28,15 +29,22 @@
 .to-do-item > * {
   color: #fff;
 }
+.to-do-item .content-wrapper h3 {
+  word-break: break-word;
+}
 .to-do-item .content-wrapper p {
   font-size: 0.8em;
 }
 .to-do-item .content-wrapper > * {
   color: #fff;
 }
-.to-do-item .impt-btn {
+.to-do-item .trash-btn {
+  font-size: 1.7em;
   margin-left: auto;
-  scale: 1.2;
+  color: rgb(255, 80, 80);
+}
+.to-do-item .impt-btn {
+  font-size: 1.8em;
 }
 .to-do-item span:hover {
   cursor: pointer;

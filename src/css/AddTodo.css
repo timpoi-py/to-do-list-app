@@ -45,10 +45,15 @@
   color: #fff;
   font-weight: 600;
 }
+.add-todo-form form .btn-text-wrapper .task-item-input:hover {
+  cursor: text;
+}
 .add-todo-form form .params-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5em;
   width: 100%;
 }
 .add-todo-form form .params-wrapper .add-to-myDay-wrapper {
@@ -58,11 +63,13 @@
 }
 .add-todo-form form .params-wrapper .due-date-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   gap: 0.5em;
 }
 .add-todo-form form .params-wrapper .due-date-wrapper input::-webkit-calendar-picker-indicator {
   filter: invert(1);
+  cursor: pointer;
 }
 .add-todo-form form input {
   background-color: transparent;
@@ -85,8 +92,6 @@
 
 .add-todo-btn-container {
   padding: 1em;
-  display: flex;
-  justify-content: flex-end;
   background-color: transparent;
 }
 .add-todo-btn-container .add-todo-btn {
@@ -110,6 +115,7 @@
 }
 .add-todo-btn-container .add-todo-btn:hover {
   filter: brightness(1.2);
+  cursor: pointer;
 }
 
 .add-btn-hide {

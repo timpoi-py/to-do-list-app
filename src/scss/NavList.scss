@@ -6,17 +6,25 @@
   background-color: $clr-light;
   display: none;
 
-  ul li:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
   .container {
     text-align: center;
     line-height: 2;
 
     display: grid;
     gap: 1em;
+
+    ul {
+      display: grid;
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
 
     hr {
       width: 80%;
@@ -45,4 +53,21 @@
 
 .show {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: block;
+    min-width: 30ch;
+
+    .container {
+      text-align: right;
+      padding: 2em 1.5em 0.5em 1.5em;
+
+      hr {
+        margin: 0;
+        width: 90%;
+      }
+    }
+  }
 }

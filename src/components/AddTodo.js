@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../css/styles.js";
 import { v4 as uuidv4 } from "uuid";
+import { DateTime } from "luxon";
 
 const AddTodo = ({ updateStorageList }) => {
   const [taskItem, setTaskItem] = useState("");
@@ -25,6 +26,7 @@ const AddTodo = ({ updateStorageList }) => {
       due_date: dueDate,
       done: false,
       important: false,
+      date_time_created: DateTime.now(),
     };
 
     localStorage.setItem(uuidKey, JSON.stringify(formValue));

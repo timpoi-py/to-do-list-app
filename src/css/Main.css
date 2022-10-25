@@ -1,6 +1,11 @@
 /* Custom CSS */
-.main {
-  padding: 1em;
-  display: grid;
-  gap: 0.2em;
+.main-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1700px) {
+  .main-container {
+    margin: 0 1em;
+  }
 }/*# sourceMappingURL=Main.css.map */
