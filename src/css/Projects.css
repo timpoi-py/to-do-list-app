@@ -1,5 +1,10 @@
 /* Custom CSS */
-.projects-content {
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.projects .projects-content {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -8,25 +13,31 @@
   gap: 1em;
   position: relative;
 }
-.projects-content .trash-btn {
+.projects .projects-content a {
+  width: 80%;
+  word-break: break-all;
+}
+.projects .projects-content .trash-btn {
   color: rgb(255, 70, 70);
   position: absolute;
   left: -24px;
 }
-.projects-content span:hover {
+.projects .projects-content span:hover {
   cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  .projects-content {
+  .projects .projects-content {
     width: 100%;
-    margin: 0;
     position: relative;
   }
-  .projects-content a {
-    width: 100%;
+  .projects .projects-content a {
+    line-height: 1;
+    margin-right: auto;
+    word-break: break-all;
+    width: 222px;
   }
-  .projects-content .trash-btn {
+  .projects .projects-content .trash-btn {
     position: static;
   }
 }/*# sourceMappingURL=Projects.css.map */

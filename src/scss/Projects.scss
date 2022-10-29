@@ -1,35 +1,51 @@
 @import "custom";
 
-.projects-content {
-  width: 80%;
-  margin: 0 auto;
+.projects {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 1em;
-  position: relative;
 
-  .trash-btn {
-    color: rgb(255, 70, 70);
-    position: absolute;
-    left: -24px;
-  }
+  .projects-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    position: relative;
 
-  span:hover {
-    cursor: pointer;
+    a {
+      width: 80%;
+      word-break: break-all;
+    }
+
+    .trash-btn {
+      color: rgb(255, 70, 70);
+      position: absolute;
+      left: -24px;
+    }
+
+    span:hover {
+      cursor: pointer;
+    }
   }
 }
 @media screen and (min-width: 768px) {
-  .projects-content {
-    a {
+  .projects {
+    .projects-content {
       width: 100%;
-    }
-    width: 100%;
-    margin: 0;
-    position: relative;
+      position: relative;
 
-    .trash-btn {
-      position: static;
+      a {
+        line-height: 1;
+        margin-right: auto;
+        word-break: break-all;
+        width: 222px;
+      }
+
+      .trash-btn {
+        position: static;
+      }
     }
   }
 }
