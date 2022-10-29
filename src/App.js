@@ -19,7 +19,9 @@ const App = () => {
     else {
       for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
-        initialStorageList.push(JSON.parse(localStorage.getItem(key)));
+        if (!(key === "projList")) {
+          initialStorageList.push(JSON.parse(localStorage.getItem(key)));
+        }
       }
       return initialStorageList;
     }
@@ -32,12 +34,45 @@ const App = () => {
     setStorageList((prevStorageList) => [...prevStorageList, lastAdded]);
   };
 
+  const getInitialPorjectList = () => {
+    let list = [];
+    if (localStorage.getItem("projList") === null) {
+      localStorage.setItem("projList", JSON.stringify([]));
+      return list;
+    } else {
+      list = JSON.parse(localStorage.getItem("projList"));
+      return list;
+    }
+  };
+
+  const [projectList, setProjectList] = useState(getInitialPorjectList());
+  const [activeProject, setActiveProject] = useState("");
+  const [activeProjectId, setActiveProjectId] = useState("");
+
   return (
     <div className="App">
       <Header toggleDisplay={toggleDisplay} />
-      <NavList display={display} />
-      <Main storageList={storageList} setStorageList={setStorageList} />
-      <AddTodo updateStorageList={updateStorageList} />
+      <NavList
+        display={display}
+        projectList={projectList}
+        setProjectList={setProjectList}
+        activeProject={activeProject}
+        setActiveProject={setActiveProject}
+        setStorageList={setStorageList}
+        setActiveProjectId={setActiveProjectId}
+      />
+      <Main
+        storageList={storageList}
+        setStorageList={setStorageList}
+        projectList={projectList}
+        setProjectList={setProjectList}
+        activeProject={activeProject}
+      />
+      <AddTodo
+        updateStorageList={updateStorageList}
+        activeProject={activeProject}
+        activeProjectId={activeProjectId}
+      />
     </div>
   );
 };

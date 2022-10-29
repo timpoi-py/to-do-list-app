@@ -29,18 +29,27 @@
 .to-do-item > * {
   color: #fff;
 }
+.to-do-item .content-wrapper {
+  margin-right: auto;
+  width: 100%;
+}
 .to-do-item .content-wrapper h3 {
   word-break: break-word;
 }
-.to-do-item .content-wrapper p {
+.to-do-item .content-wrapper .details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+.to-do-item .content-wrapper .details-wrapper p {
   font-size: 0.8em;
+  color: #fff;
 }
 .to-do-item .content-wrapper > * {
   color: #fff;
 }
 .to-do-item .trash-btn {
   font-size: 1.7em;
-  margin-left: auto;
   color: rgb(255, 80, 80);
 }
 .to-do-item .impt-btn {

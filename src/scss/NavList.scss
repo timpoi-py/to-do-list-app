@@ -39,14 +39,28 @@
       }
     }
 
-    .add-project-btn {
-      position: relative;
-      right: 0.5ch;
-    }
+    .add-project-wrapper {
+      form {
+        .add-project-input {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+        }
 
-    .add-project-btn:hover {
-      cursor: pointer;
-      opacity: 0.8;
+        .proj-input-hide {
+          display: none;
+        }
+      }
+
+      .add-project-btn {
+        position: relative;
+        right: 0.5ch;
+      }
+
+      .add-project-btn:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
     }
   }
 }
@@ -65,8 +79,18 @@
       padding: 2em 1.5em 0.5em 1.5em;
 
       hr {
-        margin: 0;
-        width: 90%;
+        text-align: end;
+        width: 100%;
+      }
+
+      .add-project-wrapper {
+        form {
+          .add-project-input {
+            width: 262.078px;
+            margin: 0;
+            text-align: end;
+          }
+        }
       }
     }
   }

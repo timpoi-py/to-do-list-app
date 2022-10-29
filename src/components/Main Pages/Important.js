@@ -28,6 +28,7 @@ const Important = ({ storageList, setStorageList }) => {
             dueDate={item.due_date}
             done={item.done}
             important={item.important}
+            project={item.project}
           />
         ))}
     </div>

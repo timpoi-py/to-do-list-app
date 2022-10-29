@@ -3,7 +3,7 @@ import "../css/styles.js";
 import { v4 as uuidv4 } from "uuid";
 import { DateTime } from "luxon";
 
-const AddTodo = ({ updateStorageList }) => {
+const AddTodo = ({ updateStorageList, activeProject, activeProjectId }) => {
   const [taskItem, setTaskItem] = useState("");
   const [myDay, setMyDay] = useState(true);
   const [dueDate, setDueDate] = useState("");
@@ -27,6 +27,8 @@ const AddTodo = ({ updateStorageList }) => {
       done: false,
       important: false,
       date_time_created: DateTime.now(),
+      project: activeProject,
+      projectId: activeProjectId,
     };
 
     localStorage.setItem(uuidKey, JSON.stringify(formValue));

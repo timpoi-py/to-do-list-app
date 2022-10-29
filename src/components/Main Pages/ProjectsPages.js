@@ -1,18 +1,24 @@
-import React from "react";
-import TodoItem from "../TodoItem";
-import PagesHeader from "../PagesHeader";
 import "../../css/styles.js";
+import TodoItem from "../TodoItem.js";
+import React from "react";
+import PagesHeader from "../PagesHeader";
+
 import { DateTime } from "luxon";
 
-const Tasks = ({ storageList, setStorageList }) => {
+const ProjectsPages = ({
+  storageList,
+  setStorageList,
+  projectList,
+  setProjectList,
+  activeProject,
+}) => {
   return (
-    <div className="tasks-page page">
+    <div className="important-pages page">
       <PagesHeader>
-        <h2>Tasks</h2>
+        <h2>{activeProject}</h2>
       </PagesHeader>
-
       {storageList
-        .filter((item) => item.key && true)
+        .filter((item) => item.project === activeProject)
         .sort(
           (a, b) =>
             DateTime.fromISO(b.date_time_created) -
@@ -28,11 +34,10 @@ const Tasks = ({ storageList, setStorageList }) => {
             dueDate={item.due_date}
             done={item.done}
             important={item.important}
-            project={item.project}
           />
         ))}
     </div>
   );
 };
 
-export default Tasks;
+export default ProjectsPages;

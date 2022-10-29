@@ -3,11 +3,18 @@ import Tasks from "./Main Pages/Tasks";
 import MyDay from "./Main Pages/MyDay";
 import Important from "./Main Pages/Important";
 import ThisWeek from "./Main Pages/ThisWeek";
+import ProjectsPages from "./Main Pages/ProjectsPages";
 import { Link, Routes, Route } from "react-router-dom";
 
 import "../css/styles.js";
 
-const Main = ({ storageList, setStorageList }) => {
+const Main = ({
+  storageList,
+  setStorageList,
+  projectList,
+  setProjectList,
+  activeProject,
+}) => {
   return (
     <div className="main">
       <div className="main-container">
@@ -48,6 +55,18 @@ const Main = ({ storageList, setStorageList }) => {
               />
             }
           ></Route>
+          <Route
+            path={`/projects/${activeProject}`}
+            element={
+              <ProjectsPages
+                storageList={storageList}
+                setStorageList={setStorageList}
+                projectList={projectList}
+                setProjectList={setProjectList}
+                activeProject={activeProject}
+              />
+            }
+          />
         </Routes>
       </div>
     </div>

@@ -30,11 +30,19 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
-.nav-list .container .add-project-btn {
+.nav-list .container .add-project-wrapper form .add-project-input {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.nav-list .container .add-project-wrapper form .proj-input-hide {
+  display: none;
+}
+.nav-list .container .add-project-wrapper .add-project-btn {
   position: relative;
   right: 0.5ch;
 }
-.nav-list .container .add-project-btn:hover {
+.nav-list .container .add-project-wrapper .add-project-btn:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -53,7 +61,12 @@
     padding: 2em 1.5em 0.5em 1.5em;
   }
   .nav-list .container hr {
+    text-align: end;
+    width: 100%;
+  }
+  .nav-list .container .add-project-wrapper form .add-project-input {
+    width: 262.078px;
     margin: 0;
-    width: 90%;
+    text-align: end;
   }
 }/*# sourceMappingURL=NavList.css.map */

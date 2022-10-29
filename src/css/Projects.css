@@ -1,0 +1,32 @@
+/* Custom CSS */
+.projects-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+}
+.projects-content .trash-btn {
+  color: rgb(255, 70, 70);
+  position: absolute;
+  left: -24px;
+}
+.projects-content span:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-content {
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+  .projects-content a {
+    width: 100%;
+  }
+  .projects-content .trash-btn {
+    position: static;
+  }
+}/*# sourceMappingURL=Projects.css.map */

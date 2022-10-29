@@ -7,3 +7,4 @@ import "./AddTodo.css";
 import "./Main.css";
 import "./pages.css";
 import "./PagesHeader.css";
+import "./Projects.css";

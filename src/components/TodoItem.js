@@ -8,6 +8,7 @@ const TodoItem = ({
   dueDate,
   done,
   important,
+  project,
 }) => {
   const [checkBtn, setCheckBtn] = useState(done ? "complete-btn" : "");
   const [importantBtn, setImportantBtn] = useState(
@@ -94,7 +95,10 @@ const TodoItem = ({
       </span>
       <div className="content-wrapper">
         <h3>{task}</h3>
-        <p>{dueDate}</p>
+        <div className="details-wrapper">
+          <p>{dueDate}</p>
+          <p>{project}</p>
+        </div>
       </div>
       <span
         className="material-symbols-outlined trash-btn"

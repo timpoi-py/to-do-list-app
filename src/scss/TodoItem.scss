@@ -36,12 +36,22 @@
   }
 
   .content-wrapper {
+    margin-right: auto;
+    width: 100%;
+
     h3 {
       word-break: break-word;
     }
 
-    p {
-      font-size: 0.8em;
+    .details-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 2em;
+
+      p {
+        font-size: 0.8em;
+        color: #fff;
+      }
     }
   }
 
@@ -51,7 +61,6 @@
 
   .trash-btn {
     font-size: 1.7em;
-    margin-left: auto;
     color: rgb(255, 80, 80);
   }
 
